@@ -1,0 +1,441 @@
+@font-face {
+    font-family: helveticaNeue;
+    src: url("../fonts/Helvetica-Neue-Font/HelveticaNeueMediumExtended/Helvetica\ Neue\ Medium\ Extended.ttf");
+    src: url("../fonts/Helvetica-Neue-Font/HelveticaNeueUltraLight/Helvetica\ Neue\ UltraLight.otf");
+}
+
+* {
+    font-family: helveticaNeue;
+    font-weight: 400;
+    letter-spacing: 2.8px;
+}
+body {
+    margin: 0;
+}
+#wrapper {
+    width: 1400px;
+    margin: 0 auto;
+    background-color: #fff;
+    
+}
+.container {
+    width: 1070px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .header {
+        height: 60px;
+        background-color: #373A3C;
+        border-radius: 4px 4px 0 0;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 16px;
+        line-height: 16px;
+        
+    }
+        .header__container, .header__nav {
+            height: 100%;
+        }
+            .header__nav, .header__menu {
+                display: flex;
+                align-items: center;
+            }
+            .header__nav {
+                justify-content: space-between;
+            }
+                .header__item {
+                    list-style: none;
+                }
+                .header__link, 
+                .personal-area__link {
+                    color: rgba(255, 255, 255, 0.5);
+                    text-decoration: none;
+                    font-size: 16px;
+                    line-height: 16px;letter-spacing: 1.8px;
+                }
+                .header__link:hover,
+                .personal-area__link:hover {
+                    color: #fff;
+                }
+                .header__item:after,
+                .header__personal-area::after {
+                    font-family:"Segoe MDL2 Assets";
+                    content: "\E70D";
+                    color: #8dd83d;
+                    margin-left: 5px;
+                    width: 12px;
+                    height: 6.5px;
+                    font-size: 12px;
+                }
+                .header__personal-area::before {
+                    font-family: "Segoe MDL2 Assets";
+                    content: "\E77B";
+                    color: #8dd83d;
+                    margin-right: 5px;
+                    width: 20px;
+                    height: 20px;
+                }
+                .header__src {
+                    width: 210px;
+                    font-size: 16px;
+                    line-height: 21px;
+                    padding-left: 15px;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                }
+                .header__item,
+                .header__src {
+                margin-right: 35px;
+                }
+
+#main {
+    width: 100%;
+}
+.carousel {
+    height: 648px;
+    background-image: url("../images/Star-Wars-Battlefront-II-combat.png");
+    position: relative;
+}
+.carousel__indicators {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+.indicator {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #8dd83d;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: transparent;
+    margin-bottom: 43px;
+    cursor: pointer;
+
+}
+.indicator:not(:last-child) {
+margin-right: 10px;
+}
+.carousel__container {
+    height: 100%;
+    display: flex ;
+    justify-content: space-between;
+    z-index: 2;
+}
+.game__title {
+    margin: 0;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 42px;
+}
+.game__version {
+     margin: 0;
+     color: #fff;
+     font-size: 24px;
+     font-weight: 600;
+     line-height: 28px;
+}
+.carousel__left-control,
+.carousel__right-control {
+    width: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.left-control__top,
+.right-control__top {
+    width: 13.5px;
+    height: 13.5px;
+    border-top: 3.5px solid #8dd83d;
+    border-left:3.5px solid #8dd83d;
+    border-radius: 2.5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.left-control__top {  
+    transform: rotate(-45deg);
+}
+.right-control__top {
+    transform: rotate(135deg);
+}
+.carousel__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 30%;
+    z-index: 10;
+}
+.game {
+    margin-top: 40%;
+}
+.buttons {
+    margin-bottom: 30%;
+}
+.btn {
+    padding: 8px 19px;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #8dd83d;
+    cursor: pointer;
+    letter-spacing: 1.8px;
+}
+.btn-explore {
+    margin-left: 13px;
+    background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+}
+.highlights {
+    width: 100%;
+    background: radial-gradient(100% 100% at 50% 0%, #686C6F 0%, #373A3C 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.highlight__icon {
+    margin-top: 64px;
+}
+.highlight__title {
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 800;
+    letter-spacing: 3.8px;
+}
+.highlight__title_bottom {
+    margin: 0;
+    color: #fff;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 600;
+    letter-spacing: 3.8px;
+}
+.list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 43px 0 0 0;
+    z-index: 0;
+}
+.production__content {
+    box-sizing: border-box;
+    padding: 21px;
+}
+.card {
+    width: 320px;
+    background-color: #fff;
+    margin-bottom: 160px;
+    border: 1px solid #8dd83d;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.productions__card:not(:last-child) {
+    margin-right: 64px;
+}
+.production__img {
+    width: 100%;
+    height: 180px;
+    background-color: #fafafa;
+    background-repeat: no-repeat;
+    background-position: center center
+}
+.production__title {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 600;
+}
+.production__description {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    width: 259px;
+}
+.production__button {
+    width: 100%;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 1px;
+}
+.games {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.games__bgi {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: url(../images/backGames.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: brightness(70%);
+}
+.games__control {
+    position: absolute;
+    top: 120px;
+    right: 55px;
+    width: 21px;
+    height: 21px;
+}
+.games__title {
+    margin-top: 105px;
+    z-index: 10;
+}
+.games__title h2 {
+    margin: 0;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 800;
+    color: #fff;
+}
+.games__card {
+    transition: all 0.2s linear ;
+     margin-bottom: 0;
+}
+.games__card:not(:last-child) {
+    margin-right: 31px;
+}
+.games__list {
+    margin-top: 54px;
+    margin-left: 66px;
+   
+}
+.games__card:hover {
+    transform: scale(1.1);
+}
+.card-description {
+    height: 74px;
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.store-btn {
+    z-index: 10;
+    margin-top: 58px;
+    background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+    font-size: 21px;
+    line-height: 21px;
+    padding: 11px 47px 21px;
+    margin-bottom: 140px;
+}
+.design-lab {
+    width: 100%;
+    background: radial-gradient(100% 100% at 50% 0%, rgba(193, 255, 127, 0.1) 0%, rgba(141, 216, 61, 0.1) 100%),
+    url(../images/design-bgi.png);
+    display: flex;
+    color: #fff;
+ }
+ .design-lab__title {
+     font-size: 48px;
+     line-height: 56px;
+     font-weight: 900;
+     margin-top: 114px;
+     margin-bottom: 0;
+ }
+ .design-lab__description {
+     width: 533px;
+     font-size: 24px;
+     line-height: 28px;
+     font-weight: 600;
+     margin-top: 9px ;
+     margin-bottom: 0;
+     letter-spacing: 1.8px;
+ }
+.design-lab__btn_gray, .design-lab__btn_green {
+    margin-top: 37px;
+    margin-bottom: 145px;
+    margin-right: 15px;
+    font-size: 16px;
+    line-height: 21px;
+}
+.design-lab__btn_gray {
+    background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+    padding: 19px 61px 19px 52px;
+}
+.design-lab__btn_green {
+    padding: 19px 23px;
+}
+#foot {
+    width: 100%;
+    background: #373A3C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav__list {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+}
+.footer__menu {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.menu__list {
+    list-style: none;
+    padding: 0;
+}  
+/* 
+.footer__menu:nth-child(3) .menu__list {
+    display: flex;
+} */
+/* .menu__list:last-child .menu__item {
+    margin-right: 20px;
+} */
+.menu__title {
+    color: #8dd83d;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 900;
+    margin-top: 58px;
+    margin-bottom: 0rem;
+}
+.menu__item {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.menu__link {
+    text-decoration: none;
+    color: #fff;
+    
+}
+.line {
+    width: 1200px ;
+    border: 1px solid #fff;
+    opacity: 0.34;
+    margin-top: 50px;
+
+}
+.copyright {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 38px;
+}

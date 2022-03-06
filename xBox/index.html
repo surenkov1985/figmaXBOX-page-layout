@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="head" class="header">
+           <div class="container header__container">
+                <nav class="header__nav">
+                    <div class="header__logo"><a href="" class="logo__link"><img :src="headerLogo" alt=""></a></div>
+                    <div class="header__menu">
+                        <ul class="header__menu">
+                            <li class="header__item" v-for="item of headerMenu"><a href="" class="header__link">{{item}}</a></li>
+                        </ul>
+                        <form action="">
+                            <input class="header__src" type="text" name="" id="" placeholder="Search">
+                        </form>
+                        <div class="header__personal-area"><a href="" class="personal-area__link">{{person}}</a></div>
+                    </div>
+                </nav>
+           </div>
+        </header>
+
+        <main id="main" class="main">
+            <section class="carousel">
+                <div class="carousel__indicators">
+                    <div class="indicator indicator__left"></div>
+                    <div class="indicator indicator__center"></div>
+                    <div class="indicator indicator__right"></div>
+                </div>
+                <div class="carousel__container">
+                    <div class="carousel__left-control">
+                        <div class="control left-control__top"></div>
+                    </div>
+                    <div class="carousel__content">
+                        <div class="game">
+                            <h2 class="game__title">{{gameTitle}}</h2>
+                            <p class="game__version">{{gameVersion}}</p>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn btn-trailer">{{trailer}}</button>
+                            <button class="btn btn-explore">{{explore}}</button>
+                        </div>
+                    </div>
+                    <div class="carousel__right-control">
+                        <div class="control right-control__top"></div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="highlights">
+                <div class="highlight__icon"><img src="./images/xbox icon.svg" alt=""></div>
+                <h1 class="highlight__title">{{highTitle}}</h1>
+                <h2 class="highlight__title_bottom">{{highTitleBottom}}</h2>
+                <ul class="productions__list list">
+                    <li class="productions__card card" v-for="key of production">
+                        <div class="production__img card-img" :style="key.imgStyle"></div>
+                        <div class="production__content">
+                            <h4 class="production__title">{{key.cardTitle}}</h4>
+                            <p class="production__description">{{key.cardDescription}}</p>
+                            <button class="btn production__button">{{key.cardBtn}}</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="games">
+                <div class="games__bgi"></div>
+                <div class="games__title"><h2>{{gameTitle}}</h2></div>
+                <div class="games__control right-control__top"></div>
+                <ul class="games__list list">
+                    <li class="games__card card" v-for="key of gameCard">
+                        <div class="production__img card-img" :style="key.imgStyle"></div>
+                        <div class="production__content card-content">
+                            <h4 class="production__title card-title">{{key.cardTitle}}</h4>
+                            <p class="production__description card-description">{{key.cardDescription}}</p>
+                            <button class="btn production__button">{{key.cardBtn}}</button>
+                        </div>
+                    </li>
+                </ul>
+                <button class="btn store-btn">{{btnStore}}</button>
+            </section>
+
+            <section class="design-lab">
+                <div class="container">
+                    <h1 class="design-lab__title">{{designTitle}}</h1>
+                    <p class="design-lab__description">{{designDesc}}</p>
+                    <button class="btn design-lab__btn_gray">{{designBtnGray}}</button>
+                    <button class="btn design-lab__btn_green">{{designBtnGreen}}</button>
+                </div>
+            </section>
+        </main>
+        <footer id="foot" class="footer">
+            <div class="container">
+                <nav class="footer__nav">
+                    <ul class="nav__list">
+                        <li class="footer__menu" v-for="list of footerMenu">
+                            <h4 class="menu__title">{{list.menuTitle}}</h4>
+                            <ul class="menu__list"  :style="list.listStyle">
+                                <li class="menu__item" v-for="item of list.list" :style="list.itemStyle">
+                                    <a href="" class="menu__link" v-html="item"></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="line"></div>
+            <div class="copyright">
+                <div class="copyright__us">English (United States)</div>
+                <div class="copyright__copy">	&copy Microsoft 2017</div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./script/vue.js"></script>
+</body>
+</html>
